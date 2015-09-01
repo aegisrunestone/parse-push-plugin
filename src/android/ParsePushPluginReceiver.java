@@ -2,7 +2,7 @@ package com.phonegap.parsepushplugin;
 
 import com.parse.ParsePushBroadcastReceiver;
 
-import android.app.Activity;
+import android.app.Activity;b
 import android.content.Context;
 import android.content.Intent;
 import android.app.PendingIntent;
@@ -93,15 +93,15 @@ public class ParsePushPluginReceiver extends ParsePushBroadcastReceiver
 
 		
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
-		
+		builder.setSound(Settings.System.DEFAULT_NOTIFICATION_URI);
 		if(pnData.has("title")){
-			builder.setTicker(pnData.optString("title")).setContentTitle(pnData.optString("title"));
+			builder.setTicker(pnData.optString("title")).setContentTitle(pnData.optString("title") + " mewo lahu");
 		} else if(pnData.has("alert")){
 			builder.setTicker(pnTag).setContentTitle(pnTag);
 		}
 		
 		if(pnData.has("alert")){
-			builder.setContentText(pnData.optString("alert"));
+			builder.setContentText(pnData.optString("alert") + " hula meow");
 		}
 		
 		builder.setSmallIcon(getSmallIconId(context, intent))
