@@ -2,7 +2,7 @@ package com.phonegap.parsepushplugin;
 
 import com.parse.ParsePushBroadcastReceiver;
 
-import android.app.Activity;b
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.app.PendingIntent;
